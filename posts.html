@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/global.css">
+    <title>Blog</title>
+</head>
+<body bgcolor="grey">
+    <table cellspacing="0">
+        <tr class="top_">
+            <td>
+                <h1>Blog</h1>
+            </td>
+            <td align="right">
+                <a href="./index.html"><img src="./img/main.png" alt=""></a>
+                <a href="./about.html"><img src="./img/about.png" alt=""></a>
+                <a href="./posts.html"><img src="./img/post.png" alt=""></a>
+            </td>
+        </tr>
+        <tr height="800px" bgcolor="ADADAD">
+            <td colspan="2"  align="left">
+                <h3>Python 예제</h3>
+                <div>오늘은 파이썬으로 윤년을 검사하는 프로그램을 작성합니다.</div>
+                <br>
+                <div>먼저 input() 함수로 사용자가 원하는 연도를 입력받습니다.</div>
+                <div>year라는 변수에 입력 값을 저장하고 해당 입력 값이 4와 100으로 나누어 떨어지는지 검사합니다.</div>
+                <pre>
+                    <code>if year % 4 == 0 and year % 100 == 0:</code>
+                </pre>
+                <br>
+                <div>이것이 "참"일 경우 조건을 하나 더 세워줍니다.</div>
+                <pre>
+                    <code>if year % 400 == 0:</code>
+                </pre>
+                <div>만약 이 조건까지 "참"이라면 해당 연도는 윤년이 됩니다.</div>
+                <div>거짓이라면 평년이 되겠죠.</div>
+                <br>
+                <div>첫 번째 조건문 밑에 elif문을 사용해서 다른 조건을 붙여 줍니다.</div>
+                <div>이번 조건은 4로만 나누어서 떨어지는지 입니다.</div>
+                <pre>
+                    <code>elif year % 4 == 0:</code>
+                </pre>
+                <div>이 경우에는 무조건 윤년이 됩니다.</div>
+                <br>
+                <div>아래에 else문을 넣고 위 조건들이 모두 "거짓"일 경우 평년이라는 결과를 출력합니다.</div>
+                <br>
+                <pre>
+                    <code>
+                        year = int(input("연도를 입력해주세요."))
+
+                        if year % 4 == 0 and year % 100 == 0:
+                            if year % 400:
+                                print("윤년")
+                            else:
+                                print("평년")
+                        elif year % 4 == 0:
+                            print("윤년")
+                        else:
+                            print("평년")
+                    </code>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>궁금한 것이 있으면 언제든 연락주세요!</p>
+                <p>email@domain.com     H.P.010-1234-5678</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
